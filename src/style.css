@@ -1,0 +1,40 @@
+body{
+   margin: 0;
+   background: linear-gradient(180deg, rgb(34,92,198,0.7),50%,rgb(65,15,29,0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+.titleh1{
+    margin-top: 20%;
+    color: aliceblue;
+}
+.fb,.google{
+    background-color: #FFFF;
+    margin-left: 30%;
+    margin-top: 20%;
+}
+.fb{
+    color: blue;
+}
+.info-text{
+    margin-top:10%;
+    margin-bottom: 50%;
+    color: aliceblue;
+}
+.btnF{
+   margin-bottom: 5%; 
+}
+.fb-text{
+ color: black;
+}
+.img-logo{
+    background-color: antiquewhite;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    margin-left: 32%;
+    
+}
+@media (max-width:600px){
+    .img-logo{
+        text-align: center;
+    }
+}
