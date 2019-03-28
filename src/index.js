@@ -1,5 +1,6 @@
-
-  // Initialize Firebase
+import { initRoutersSocialMedia } from './util/root.js';
+import { initFirebaseAuth } from './controller/login.js';
+ 
   const init = () => {
   const config = {
     apiKey: "AIzaSyCyLgSSDGE8vkZEkGGSHKwDn6Ggz9vP_zQ",
@@ -10,5 +11,7 @@
     messagingSenderId: "409264061671"
   };
   firebase.initializeApp(config);
+  initRoutersSocialMedia();
+  initFirebaseAuth();
 }
 window.onload = init;
