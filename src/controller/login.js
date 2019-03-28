@@ -44,11 +44,10 @@ export const getProfilePicUrl = () => firebase.auth().currentUser.photoURL;
 export const getUserName = () => firebase.auth().currentUser.displayName;
 
 
-export const isUserSignedIn = () => 
-  userState() && firebase.auth().currentUser.uid;
+// export const isUserSignedIn = () => 
+//   userState() && firebase.auth().currentUser.uid;
 
-export const userState = () => 
-  firebase.auth().currentUser;
+export const userState = () => firebase.auth().currentUser;
 
 export const authStateObserver = (user) => {
   if (user && user.emailVerified) { 

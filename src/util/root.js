@@ -1,19 +1,22 @@
 import {signInForm} from '../ui/login-tmp.js';
+import { userState } from '../controller/login.js';
+import { profileTmp } from '../ui/profile-tmp.js';
+import { homeTmp } from '../ui/home-tmp.js';
+
+
 const changeTmp = (hash) => {
-    // if (userState() === null) {
-      if ((hash === '#/signin'||hash==="#"||hash=== "")) {
+    if (userState() === null) {
+      if ((hash === '#/signin')) {
+        return viewTmp('#/signin');
+      }
+    } else {
+      if (hash === '#/' || hash === '' || hash === '#') {
+        window.location.hash = '';
+        return viewTmp('#/home');
+      } else if (hash === '#/home' || hash === '#/profile') {
         return viewTmp(hash);
       }
-    //   window.location.hash = '';
-    //   return viewTmp('#/signin');
-    // } else {
-    //   if (hash === '#/' || hash === '' || hash === '#') {
-    //     window.location.hash = '';
-    //     return viewTmp('#/home');
-    //   } else if (hash === '#/home') {
-    //     return viewTmp(hash);
-    //   }
-    // }
+    }
   };
   
   const viewTmp = (routers) => {
@@ -27,22 +30,23 @@ const changeTmp = (hash) => {
     main.innerHTML = '';
     switch (router) {
     case 'home':
-     
-      navBar.appendChild(logOut());
-      main.appendChild(textarePublication());
+    root.appendChild((homeTmp()));
+      // navBar.appendChild(logOut());
+      // main.appendChild(textarePublication());
       // getAllPost(notes => {
       //   root.innerHTML = '';
       //   const uid = isUserSignedIn();
       //   root.appendChild(postListSection(notes, uid));
-        // backgroundBody.style.background = 'white';
+      //   backgroundBody.style.background = 'white';
       // });
       break;
     case 'signin':
       root.appendChild(signInForm());
       break;
-    // case 'signup':
-    //   root.appendChild(signUpForm());
-    //   break;
+    case 'profile':
+      root.appendChild((profileTmp()));
+      break;
+    
     // case 'privatePost':
     //   privatePost(notes => {
     //     root.innerHTML = '';

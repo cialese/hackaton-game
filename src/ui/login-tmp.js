@@ -1,4 +1,5 @@
 import{googleOnSubmit,facebookOnSubmit}from '../controller/login.js';
+
 export const signInForm = () => {
     const formElem = document.createElement('section');
     formElem.setAttribute('id', 'signin');
@@ -21,8 +22,6 @@ export const signInForm = () => {
         </div> `;
     
     formElem.innerHTML = tempformLogin;
-    // const logInBtn = formElem.querySelector('#btn-login');
-    // logInBtn.addEventListener('click', logInOnSubmit);
     const googleBtn = formElem.querySelector('#google-login');
     googleBtn.addEventListener('click', googleOnSubmit);
     const facebookBtn = formElem.querySelector('#facebook-login');
