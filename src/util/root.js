@@ -1,18 +1,19 @@
+import {signInForm} from '../ui/login-tmp.js';
 const changeTmp = (hash) => {
-    if (userState() === null) {
-      if ((hash === '#/signin')) {
+    // if (userState() === null) {
+      if ((hash === '#/signin'||hash==="#"||hash=== "")) {
         return viewTmp(hash);
       }
-      window.location.hash = '';
-      return viewTmp('#/signin');
-    } else {
-      if (hash === '#/' || hash === '' || hash === '#') {
-        window.location.hash = '';
-        return viewTmp('#/home');
-      } else if (hash === '#/home') {
-        return viewTmp(hash);
-      }
-    }
+    //   window.location.hash = '';
+    //   return viewTmp('#/signin');
+    // } else {
+    //   if (hash === '#/' || hash === '' || hash === '#') {
+    //     window.location.hash = '';
+    //     return viewTmp('#/home');
+    //   } else if (hash === '#/home') {
+    //     return viewTmp(hash);
+    //   }
+    // }
   };
   
   const viewTmp = (routers) => {
@@ -29,15 +30,14 @@ const changeTmp = (hash) => {
      
       navBar.appendChild(logOut());
       main.appendChild(textarePublication());
-      getAllPost(notes => {
-        root.innerHTML = '';
-        const uid = isUserSignedIn();
-        root.appendChild(postListSection(notes, uid));
+      // getAllPost(notes => {
+      //   root.innerHTML = '';
+      //   const uid = isUserSignedIn();
+      //   root.appendChild(postListSection(notes, uid));
         // backgroundBody.style.background = 'white';
-      });
+      // });
       break;
     case 'signin':
-      
       root.appendChild(signInForm());
       break;
     // case 'signup':

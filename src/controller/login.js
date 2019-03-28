@@ -1,3 +1,5 @@
+export const changeHash = hash => location.hash = hash;
+
 export const googleAuth = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(provider);
@@ -16,7 +18,7 @@ export const googleOnSubmit = () => {
     .then(result => {
       console.log('google logueado');
     }).catch(error => {
-      console.log(error.code);
+      console.log(error);
     });
 };
 

@@ -1,38 +1,28 @@
-
-
+import{googleOnSubmit,facebookOnSubmit}from '../controller/login.js';
 export const signInForm = () => {
-    const formElem = document.createElement('form');
+    const formElem = document.createElement('section');
     formElem.setAttribute('id', 'signin');
     const tempformLogin = `
-    <div id="sign-in" class = "signin-container">
-      <div class="text-first text-login">
-        <h4>La primera Red Social para emprendedores peruanos</h4>
-      </div>
       <div>
-        <div class="col-form-login-account">
-          <p class="text-login text-first-sesion">Iniciar Sesión</p>
-          <button class="fb btn-social-media" id="facebook-login">
-            <i class="fa fa-facebook fa-fw space-media"></i> Facebook
-          </button>   
-          <a href="#/google-login" class="google btn-social-media" id="google-login">
-            <i class="fa fa-google fa-fw space-media"></i> Google+
-          </a>
+      <h1 class="h1 text-center titleh1">¡GENIAL EMPECEMOS!</h1>
+        <div class="container">
+          <div class="img-logo">    
+          </div>
+          <div class="btn-group-vertical container-btn">
+            <a href="#" class="fb btn btnF " id ="facebook-login">
+            <i class="fab fa-facebook-square "> </i><strong class="fb-text"> Login with Facebook</strong>
+            </a>
+            <a href="#" class="google btn" id="google-login">
+            <img src="/img/search.png" class="icon"><strong> Login with Google</strong> 
+            </a>           
         </div>
-        <div class="space-form"><span>o</span></div>
-        <div class="register-inputs-field col-form-create-account">
-        <input type="email" class="login-social-media" id="email-social-media" placeholder="Correo electronico" required>
-        <input type="password" class="login-social-media" id="password-social-media" placeholder="Contraseña" required>
-        <p id="error-message"></p>
-      </div>
-      <p id="error-message-login"></p>
-      <button class="login-social-media btn-login" id="btn-login">Ingresa</button>
-      <p>Eres nuevo en Social Media? <a href="#/signup">Registrate</a></p>
-     </div>
-</div>`;
+        <div>
+            <label class="text-center info-text">No publicaremos nada sin tu concentimiento</label>
+        </div> `;
     
     formElem.innerHTML = tempformLogin;
-    const logInBtn = formElem.querySelector('#btn-login');
-    logInBtn.addEventListener('click', logInOnSubmit);
+    // const logInBtn = formElem.querySelector('#btn-login');
+    // logInBtn.addEventListener('click', logInOnSubmit);
     const googleBtn = formElem.querySelector('#google-login');
     googleBtn.addEventListener('click', googleOnSubmit);
     const facebookBtn = formElem.querySelector('#facebook-login');
