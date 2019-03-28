@@ -1,0 +1,24 @@
+{
+  "name": "hackaton-game",
+  "version": "1.0.0",
+  "description": "juego educativo que busca combatir los esteretipos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cinthyasegura/hackaton-game.git"
+  },
+  "keywords": [
+    "juego",
+    "game",
+    "esteretipos"
+  ],
+  "author": "cinthya janet y carla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cinthyasegura/hackaton-game/issues"
+  },
+  "homepage": "https://github.com/cinthyasegura/hackaton-game#readme"
+}
