@@ -5,8 +5,8 @@ export const profileTmp = () => {
     const tmp = document.createElement('section');
     tmp.setAttribute('id', 'profile')
     tmp.innerHTML = `
-    <div>
-        <img src="${userState().photoURL} ">
+    <div class="center-photo">
+        <img src="${userState().photoURL} alt="imagen de usuario">
     </div>
     <div>
     </div>

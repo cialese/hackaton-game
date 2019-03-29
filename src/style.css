@@ -4,7 +4,7 @@ body{
 .general{
      background-color: black;
      width: 100%;
-     height: 568px;
+     height: auto;
      background: linear-gradient(180deg, rgb(34,92,198,0.7),50%,rgb(65,15,29,0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  }
 .titleh1{
@@ -38,6 +38,12 @@ body{
     margin-left: 32%;
     
 }
+.center-photo img {
+    align-self: center;
+    border-radius: 50%;
+    width: 60%;
+  }
+
 footer{
     height: 80px;
     margin-top: 25%;

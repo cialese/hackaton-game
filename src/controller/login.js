@@ -41,8 +41,8 @@ export const logOutOnSubmit = () => {
     }).catch(error => console.log(error.code));
 };
 
-export const getProfilePicUrl = () => firebase.auth().currentUser.photoURL;
-export const getUserName = () => firebase.auth().currentUser.displayName;
+// export const getProfilePicUrl = () => firebase.auth().currentUser.photoURL;
+// export const getUserName = () => firebase.auth().currentUser.displayName;
 
 
 // export const isUserSignedIn = () => 

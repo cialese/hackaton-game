@@ -5,8 +5,8 @@ export const homeTmp = () => {
     const tmp = document.createElement('section');
     tmp.setAttribute('id', 'home')
     tmp.innerHTML = `
-    <div>
-        <img src="${userState().photoURL}">
+    <div class="center-photo">
+        <img src="${userState().photoURL}" alt="imagen de usario">
     </div>
     <div>
         <h3>${userState().displayName}</h3>
