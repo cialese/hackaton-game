@@ -31,14 +31,15 @@ export const addDoc = (callback) => {
 };
 
 export const getUserInfo = () => {
+  console.log('ashdghsadsad');
   // event.preventDefault();
   // const statePost = document.querySelector('#state-post');
   // const textMessage = document.querySelector('#input-new-note');
   // const valueTextMessage = textMessage.value;
   let countLike = 0;
-  const userUid = userState().uid
-        image = userState().photoURL
-        name = userState().displayName;
+  const userUid = 'ABC123';
+  const image = 'userState().photoURL';
+  const name = 'JANET GUTMONT';
   // const data = {
   //     message: '',
   //     timeout: 2000,
