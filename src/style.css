@@ -1,12 +1,13 @@
-body{
-   margin: 0px;;
+body {
+   margin: 0;
+   padding: 0;
+   background: linear-gradient(180deg, rgb(34,92,198,0.7),50%,rgb(65,15,29,0.8));
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
  }
-.general{
-     background-color: black;
-     width: 100%;
-     height: auto;
-     background: linear-gradient(180deg, rgb(34,92,198,0.7),50%,rgb(65,15,29,0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- }
+
 .titleh1{
     margin-top: 0%;
     color: aliceblue;
@@ -39,22 +40,50 @@ body{
     
 }
 .center-photo img {
-    align-self: center;
     border-radius: 50%;
-    width: 60%;
-  }
+    width: 40%;
+    margin-top: 15%;
+    margin-left: 25%;
+}
+.circle-btn {
+    border-radius: 50%;
+    border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 15px;
+
+}
 
 footer{
-    height: 80px;
-    margin-top: 25%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: black;
+    color: white;
+    text-align: center;
 }
-.navi{
+/* .foot-icons {
+    padding: 1%;
+} */
+/* .foot-icons i {
+    padding-bottom: 8%;
+} */
+
+.fa-user, .fa-sign-out-alt {
+    font-size: 2em;
+    padding: 2rem;
+}
+/* .navi{
     margin-top:9%;
     margin-left: 50px;
     margin-right: 50px;
     color: white;
-}
+} */
 @media (max-width:600px){
     .img-logo{
         text-align: center;

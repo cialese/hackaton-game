@@ -7,10 +7,10 @@ export const nav= () => {
 const navElem = document.createElement('footer');
 navElem.setAttribute('id','footerNav');
 navElem.innerHTML =`
-    <div class="text-center">
-    <i id="btn-profile" class="fas fa-user navi"></i>
-    <button type="button" class="btn btn-primary">Start</button>
-    <i  id="btn-out" class="fas fa-sign-out-alt navi"></i>
+    <div class="text-center foot-icons">
+    <i id="btn-profile" class="fas fa-user "></i>
+    <button type="button" class="btn btn-primary circle-btn">Start</button>
+    <i  id="btn-out" class="fas fa-sign-out-alt"></i>
     </div>
 `; 
 const btnProfile = navElem.querySelector('#btn-profile')
