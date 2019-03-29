@@ -18,6 +18,7 @@ export const googleOnSubmit = () => {
     .then(result => {
       console.log('google logueado');
     }).catch(error => {
+      
       console.log(error);
     });
 };

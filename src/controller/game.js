@@ -31,25 +31,14 @@ export const addDoc = (callback) => {
 };
 
 export const getUserInfo = () => {
-  console.log('ashdghsadsad');
-  // event.preventDefault();
-  // const statePost = document.querySelector('#state-post');
-  // const textMessage = document.querySelector('#input-new-note');
-  // const valueTextMessage = textMessage.value;
   let countLike = 0;
-  const userUid = 'ABC123';
-  const image = 'userState().photoURL';
-  const name = 'JANET GUTMONT';
-  // const data = {
-  //     message: '',
-  //     timeout: 2000,
-  //     actionText: 'Undo'
-  //   };
-   
+  const userUid = userState().uid;
+  const image = userState().photoURL;
+  const name = userState().displayName;
     createDoc(userUid, name, image, countLike)
-      .then(() => {
-        console.log('nota agregada');
+      .then((response) => {
+        console.log(response);
       }).catch(() => {
-        console.log('nota no agregada');
+        console.log('puntaje no agregada');
       });
 };

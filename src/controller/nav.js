@@ -2,6 +2,7 @@ import {logOutOnSubmit} from '../controller/login.js'
 import{changeHash} from '../controller/login.js';
 import{profileTmp}from '../ui/profile-tmp.js';
 import {getUserInfo} from '../controller/game.js';
+
 export const nav= () => {
 const navElem = document.createElement('footer');
 navElem.setAttribute('id','footerNav');
