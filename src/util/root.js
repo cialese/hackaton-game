@@ -2,7 +2,7 @@ import {signInForm} from '../ui/login-tmp.js';
 import { userState } from '../controller/login.js';
 import { profileTmp } from '../ui/profile-tmp.js';
 import { homeTmp } from '../ui/home-tmp.js';
-
+import {nav} from '../controller/nav.js';
 
 const changeTmp = (hash) => {
     if (userState() === null) {
@@ -23,14 +23,19 @@ const changeTmp = (hash) => {
     const router = routers.substr(2, routers.length - 2);
     const main = document.getElementById('main');
     const root = document.getElementById('root');
+    const footerNav=document.getElementById('footer');
     // const navBar = document.getElementById('nav');
     // const backgroundBody = document.getElementById('background-body');
     root.innerHTML = '';
     // navBar.innerHTML = '';
     main.innerHTML = '';
+    footerNav.innerHTML='';
     switch (router) {
     case 'home':
-    root.appendChild((homeTmp()));
+    
+    root.appendChild(homeTmp());
+    footerNav.appendChild(nav());
+ 
       // navBar.appendChild(logOut());
       // main.appendChild(textarePublication());
       // getAllPost(notes => {
@@ -45,6 +50,7 @@ const changeTmp = (hash) => {
       break;
     case 'profile':
       root.appendChild((profileTmp()));
+      footerNav.appendChild(nav());
       break;
     
     // case 'privatePost':

@@ -37,6 +37,7 @@ export const logOutOnSubmit = () => {
   logOut()
     .then(() => {
       changeHash('/signin'); 
+      console.log('cerraste sesión')
     }).catch(error => console.log(error.code));
 };
 

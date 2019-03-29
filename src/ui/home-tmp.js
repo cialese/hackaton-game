@@ -10,7 +10,17 @@ export const homeTmp = () => {
     </div>
     <div>
         <h3>${userState().displayName}</h3>
+        <h4 class="text-center">Instrucciones</h4>
+        <p>hksajhdksajhdkjhsakjdhsakdjsjdasdsa
+        sadsadsadsadsadsadsadsadsadsadsad
+        sadsadsadsadkjadkjsahkdhsakdhjsad
+        hdgjasgdjsagjdgsajdgjsadgjsagdjsagd
+        fgfhgfhfhgfhfhfhgfhfhgfhgfhfhfhgfhgf
+        gdhfhgfhgfhgfhgfhgfvnffhgfhgfhgfhfhf
+        gjhgjhgjhgjhgjhgjhgjgjhgjgjhgjgjhgjhg</p>
     </div>
+    
     `;
+    
     return tmp;
 } 
