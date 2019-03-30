@@ -20,16 +20,16 @@ export const nav = () => {
     root.innerHTML = '';
     root.appendChild(homeTmp());
     window.location.hash = '';
-    changeHash('/home');
+    changeHash('/instructions');
   });
-  const btnProfile = navElem.querySelector('#btn-profile');
-  btnProfile.addEventListener('click', () => {
-    const root = document.getElementById('root');
-    root.innerHTML = '';
-    root.appendChild(profileTmp());
-    window.location.hash = '';
-    changeHash('/profile');
-  });
+  // const btnProfile = navElem.querySelector('#btn-profile');
+  // btnProfile.addEventListener('click', () => {
+  //   const root = document.getElementById('root');
+  //   root.innerHTML = '';
+  //   root.appendChild(profileTmp());
+  //   window.location.hash = '';
+  //   changeHash('/instructions');
+  // });
   const btnLogout = navElem.querySelector('#btn-out');
   btnLogout.addEventListener('click', () => {
     logOutOnSubmit();

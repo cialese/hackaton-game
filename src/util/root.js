@@ -1,21 +1,22 @@
 import {signInForm} from '../ui/login-tmp.js';
 import { userState } from '../controller/login.js';
-import { profileTmp } from '../ui/profile-tmp.js';
+// import { profileTmp } from '../ui/profile-tmp.js';
 import { homeTmp } from '../ui/home-tmp.js';
 import { nav } from '../ui/nav.js';
+import { instructionsTmp } from '../ui/instructions-tmp.js';
 // import { gameTmp, game1Tmp } from '../ui/game-tmp.js';
 
 
 const changeTmp = (hash) => {
   if (userState() === null) {
-    if ((hash === '#/signin')) {
-      return viewTmp('#/signin');
+    if ((hash === '#/home')) {
+      return viewTmp('#/home');
     }
   } else {
     if (hash === '#/' || hash === '' || hash === '#') {
       window.location.hash = '';
       return viewTmp('#/home');
-    } else if (hash === '#/home' || hash === '#/profile' || hash === '#/game') {
+    } else if (hash === '#/home' || hash === '#/profile' || hash === '#/instructions' || hash === '#/game') {
       return viewTmp(hash);
     }
   }
@@ -45,12 +46,16 @@ const viewTmp = (routers) => {
   case 'signin':
     root.appendChild(signInForm());
     break;
-  case 'profile':
-    root.appendChild((profileTmp()));
-    footerNav.appendChild(nav());
-    break;
+  // case 'profile':
+  //   root.appendChild((profileTmp()));
+  //   footerNav.appendChild(nav());
+  //   break;
   case 'game':
     root.appendChild(gameTmp());
+    break;
+  case 'instructions':
+    root.appendChild(instructionsTmp());
+    footerNav.appendChild(nav());
     break;
     // case 'privatePost':
     //   privatePost(notes => {

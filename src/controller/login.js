@@ -10,7 +10,7 @@ export const facebookAuth = () => {
     return firebase.auth().signInWithPopup(provider);
 };
 
-export const logOut = () =>  firebase.auth().signOut();
+export const logOut = () => firebase.auth().signOut();
 
 
 export const googleOnSubmit = () => {
@@ -27,7 +27,7 @@ export const facebookOnSubmit = () => {
   facebookAuth()
     .then(() => {
       window.location.hash = '';
-      changeHash('/home'); 
+      changeHash('/instructions'); 
       console.log('facebook logueado');
     }).catch(error => {
       console.log(error.code);
@@ -37,7 +37,7 @@ export const facebookOnSubmit = () => {
 export const logOutOnSubmit = () => {
   logOut()
     .then(() => {
-      changeHash('/signin'); 
+      changeHash('/home'); 
       console.log('cerraste sesión')
     }).catch(error => console.log(error.code));
 };
@@ -53,10 +53,10 @@ export const userState = () => firebase.auth().currentUser;
 
 export const authStateObserver = (user) => {
   if (user && user.emailVerified) { 
-    changeHash('/home');
+    changeHash('/instructions');
   } else {
     logOut();
-    changeHash('#/signin');
+    changeHash('#/home');
   }
 };
 
