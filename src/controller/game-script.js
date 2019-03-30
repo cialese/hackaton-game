@@ -17,17 +17,11 @@ const loadQuestion = (questionIndex) => {
   const q = questions[questionIndex];
   questionEl.textContent = (questionIndex + 1) + '.' + q.question;
   imgNav.src=q.gif;
-  
-  // const createImg=document.createElement('div')
-  // const imgSrc = `<img src="${q.gif}">`
-  // createImg.innerHTML=imgSrc;
-  // imageContent.appendChild(createImg);
-
   opt1.textContent = q.option1;
   opt2.textContent = q.option2;
 };
 
-// const sumPoints = (obj, points) => obj.score += points;
+
 
 export const loadNextQuestion = () => {
   const selectedOption = document.querySelector('input[type=radio]:checked');
