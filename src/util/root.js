@@ -34,7 +34,7 @@ const viewTmp = (routers) => {
   footerNav.innerHTML = '';
   switch (router) {
   case 'home':
-    
+    contentQuestion.style.display='none';
     root.appendChild(homeTmp());
     footerNav.appendChild(nav());
 
