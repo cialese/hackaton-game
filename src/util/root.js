@@ -8,15 +8,20 @@ import { instructionsTmp } from '../ui/instructions-tmp.js';
 
 
 const changeTmp = (hash) => {
-  if (userState() === null) {
+  // if (userState() === null) {
+    // console.log('frgrg', userState());
+    
     if ((hash === '#/signin')) {
       return viewTmp('#/signin');
-    }
+    // }
   } else {
     if (hash === '#/' || hash === '' || hash === '#') {
+
       window.location.hash = '';
       return viewTmp('#/home');
     } else if (hash === '#/home' || hash === '#/profile' || hash === '#/instructions' || hash === '#/game') {
+      console.log('aaaaa');
+      
       return viewTmp(hash);
     }
   }

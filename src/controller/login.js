@@ -56,7 +56,7 @@ export const authStateObserver = (user) => {
     changeHash('/instructions');
   } else {
     logOut();
-    changeHash('#/home');
+    changeHash('/home');
   }
 };
 
