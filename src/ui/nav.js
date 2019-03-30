@@ -10,7 +10,7 @@ export const nav = () => {
   navElem.innerHTML = `
     <div class="text-center foot-icons">
     <i id="btn-profile" class="fas fa-user "></i>
-    <button id="btn-start" type="button" class="btn btn-primary circle-btn">Start</button>
+    <a id="btn-start" href="#/game" class="btn circle-btn">Start</a>
     <i  id="btn-out" class="fas fa-sign-out-alt"></i>
     </div>
 `; 

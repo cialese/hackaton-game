@@ -12,9 +12,9 @@ export const instructionsTmp = () => {
             </div>
         </div>
     <div>
-        <h4 class="text-center">${userState().displayName}</h4>
-        <h4 class="text-center">Instrucciones</h4>
-        <p>lorem ipsum</p>
+        <h4 class="text-center"><span>Hola! </span>${userState().displayName}</h4>
+        <h4 class="text-center h4 colortitle">Instrucciones</h4>
+        <p class="container parrafo">Te presentaremos escenarios donde deberas identificar que tipo de estereotipo o prejuicio se esta dando.</p>
     
     </div>
 

@@ -7,7 +7,7 @@ export const signInForm = () => {
       <div>
         <h1 class="h1 text-center titleh1">¡GENIAL EMPECEMOS!</h1>
           <div class="container">
-          <div class="img-logo">    
+          <img src="https://i.ibb.co/Tt4SsDc/LogIn.png" width="200">    
       </div>
           <div class="btn-group-vertical container-btn">
             <a href="#" class="fb btn btnF " id ="facebook-login">
