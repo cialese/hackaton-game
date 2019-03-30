@@ -1,7 +1,7 @@
 body {
    margin: 0;
    padding: 0;
-   background: linear-gradient(180deg, rgb(34,92,198,0.7),50%,rgb(65,15,29,0.8));
+   background: linear-gradient(180deg, rgb(0,180,195,0.7),50%,rgb(97,97,97,0.8));
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
@@ -84,6 +84,37 @@ footer{
     margin-right: 50px;
     color: white;
 } */
+.marg-title{
+    margin-top: 20%;
+    margin-left: 10%;
+    color:white;
+}
+.img-nav{
+    background-color: aliceblue;
+    margin: 30px;
+    width: 250px;
+    height: 150px;
+}
+.option{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+.option input {
+    display: none;
+}
+.next-btn{
+    background-color:#FFFF;
+    border-radius: 10px;
+}
+.next-button{
+    align-self: center;
+}
+.option:hover {
+    background-color: #fff;
+    color: black;
+}
 @media (max-width:600px){
     .img-logo{
         text-align: center;

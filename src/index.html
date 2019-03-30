@@ -16,53 +16,26 @@
   <section id="main"></section>
   <footer id="footer"></footer>
 
-
-  <div class="content-question" style="display:none">
+  <div id ="content-question"class="content-question" style="display:none">
     <div id="quizContainer" class="container">
-      <div class="title">Computer Quiz</div>
-      
-      <div id="question" class="question" ></div>
+      <div id="question" class="question title h5 marg-title " ></div>
       
       <div id="img-content"></div>
-       <img id="img-nav" src="" >
-       <label class="option"><input type="radio" name="option" value="1"/><span id="opt1"></span></label>
-       <label class="option"><input type="radio" name="option" value="2"/><span id="opt2"></span></label>
+      <div class="container">
+       <img  class ="img-nav rounded float-left"id="img-nav" src="" >
+       <label for="o1" class="option"><input id="o1" type="radio" name="option" value="1"/><span class="radio-text" id="opt1"></span></label>
+       <label for="o2" class="option"><input id="o2" type="radio" name="option" value="2"/><span class="radio-text" id="opt2"></span></label>
        <!-- <button id="opt1" value="1"></button>
        <button id="opt2" value="2"></button> -->
-       <button id="nextButton" class="next-btn" >next question</button> 
+       <button id="nextButton" class="next-btn">Siguiente</button> 
       </div>
-     
+    </div>
      <div id ="result" class="container result" style="display:none"></div>   
   </div>
 
 
 
-  <!-- <div id="quizContainer" class="container">
-    <div class="title">Computer Quiz</div>
-    <div id="question" class="question" ></div>
-      <div id="img-content"></div>
-      <img id="img-nav" src="" >
-      <label  class="option"><input type="radio" name="option" value="1"/><span id="opt1"></span></label>
-      <label  class="option"><input type="radio" name="option" value="2"/><span id="opt2"></span></label>
-      <button id="nextButton" class="next-btn" >next question</button> 
-  </div>
-  <div id ="result" class="container result" style="display:none"> -->
-
-          <div class="title">Computer Quiz</div>
-          
-          <div id="question" class="question" ></div>
-          
-          <div id="img-content"></div>
-            <img id="img-nav" src="" >
-            <label  class="option"><input type="radio" name="option" value="1"/><span id="opt1"></span></label>
-            <label  class="option"><input type="radio" name="option" value="2"/><span id="opt2"></span></label>
-            <!-- <button id="opt1" value="1"></button>
-            <button id="opt2" value="2"></button> -->
-            <button id="nextButton" class="next-btn" >next question</button> 
-          </div>
-        
-        <div id ="result" class="container result" style="display:none"></div>      
-  </div>
+ 
   
 <script type="module"src="../src/controller/game-script.js"></script>
 <script type="module"src="../src/bd/questions.js"></script>

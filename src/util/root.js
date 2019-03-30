@@ -9,8 +9,8 @@ import { instructionsTmp } from '../ui/instructions-tmp.js';
 
 const changeTmp = (hash) => {
   if (userState() === null) {
-    if ((hash === '#/home')) {
-      return viewTmp('#/home');
+    if ((hash === '#/signin')) {
+      return viewTmp('#/signin');
     }
   } else {
     if (hash === '#/' || hash === '' || hash === '#') {
@@ -26,14 +26,18 @@ const viewTmp = (routers) => {
   const router = routers.substr(2, routers.length - 2);
   const main = document.getElementById('main');
   const root = document.getElementById('root');
+  const contentQuestion =document.getElementById('content-question')
   const footerNav = document.getElementById('footer');
+  
   root.innerHTML = '';
   main.innerHTML = '';
   footerNav.innerHTML = '';
   switch (router) {
   case 'home':
+    
     root.appendChild(homeTmp());
     footerNav.appendChild(nav());
+
     // navBar.appendChild(logOut());
     // main.appendChild(textarePublication());
     // getAllPost(notes => {
@@ -51,11 +55,13 @@ const viewTmp = (routers) => {
   //   footerNav.appendChild(nav());
   //   break;
   case 'game':
-    root.appendChild(gameTmp());
+    contentQuestion.style.display='block';
+  
     break;
   case 'instructions':
     root.appendChild(instructionsTmp());
     footerNav.appendChild(nav());
+    contentQuestion.style.display='none';
     break;
     // case 'privatePost':
     //   privatePost(notes => {
