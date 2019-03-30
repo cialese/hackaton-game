@@ -1,5 +1,5 @@
 import {questions} from '../bd/questions.js';
-import { getScore, addDoc } from '../controller/game.js';
+// import { getScore, addDoc } from '../controller/game.js';
 
 let currentQuestion = 0;
 let points = 0;
@@ -18,7 +18,7 @@ const loadQuestion = (questionIndex) => {
   opt2.textContent = q.option2;
 };
 
-const sumPoints = (obj, points) => obj.score += points;
+// const sumPoints = (obj, points) => obj.score += points;
 
 export const loadNextQuestion = () => {
   const selectedOption = document.querySelector('input[type=radio]:checked');
@@ -38,11 +38,10 @@ export const loadNextQuestion = () => {
     container.style.display = 'none';
     resultCont.style.display = 'block';
     resultCont.textContent = 'Puntaje :' + points;
-    const obj = addDoc(ee => ee.forEach(element => {
-        const values = sumPoints(element, points);
-        getScore(element, values)
-        
-    }))
+    // const obj = addDoc(ee => ee.forEach(element => {
+    //     const values = sumPoints(element, points);
+    //     getScore(element, values)   
+    // }))
    return;
   }
   loadQuestion(currentQuestion);
