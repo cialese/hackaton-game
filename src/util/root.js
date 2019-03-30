@@ -3,7 +3,8 @@ import { userState } from '../controller/login.js';
 import { profileTmp } from '../ui/profile-tmp.js';
 import { homeTmp } from '../ui/home-tmp.js';
 import { nav } from '../ui/nav.js';
-import { gameTmp, game1Tmp } from '../ui/game-tmp.js';
+import { gameTmp, game1Tmp ,gameAll} from '../ui/game-tmp.js';
+
 
 const changeTmp = (hash) => {
   if (userState() === null) {
@@ -49,7 +50,7 @@ const viewTmp = (routers) => {
     footerNav.appendChild(nav());
     break;
   case 'game':
-    root.appendChild(gameTmp());
+    root.appendChild(gameAll());
     break;
     // case 'privatePost':
     //   privatePost(notes => {
