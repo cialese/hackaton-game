@@ -1,4 +1,4 @@
-import{questions}from '../bd/questions.js'
+import{questions}from '../bd/questions.js';
 let currentQuestion=0;
 let score=0;
 const totQuestions = questions.length;
@@ -8,7 +8,6 @@ const opt1 =document.getElementById('opt1');
 const opt2 =document.getElementById('opt2');
 const opt3 =document.getElementById('opt3');
 const opt4 =document.getElementById('opt4');
-
 
 const nextButton=document.getElementById('nextButton');
 const resultCont=document.getElementById('result');
@@ -45,3 +44,7 @@ export const loadNextQuestion = () => {
     loadQuestion(currentQuestion);
 }
 
+loadQuestion(currentQuestion);
+nextButton.addEventListener('click',()=>{
+    loadQuestion();
+    });
