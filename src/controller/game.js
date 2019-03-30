@@ -1,6 +1,6 @@
 import { userState } from '../controller/login.js';
 
-export const createDoc = (uid, userName, userPhoto, score) => {
+export const createDoc = (uid, userName, userPhoto, scores) => {
   return firebase
     .firestore()
     .collection('users')
@@ -8,7 +8,7 @@ export const createDoc = (uid, userName, userPhoto, score) => {
       uid,
       userName,
       userPhoto,
-      score 
+      score: scores
     }).catch((error) => {
       console.log(error);
     });
@@ -43,11 +43,11 @@ export const getUserInfo = () => {
     });
 };
 
-export const updateScore = (id, score) => {
+export const updateScore = (id, scores) => {
   let refDoc = firebase.firestore().collection('users').doc(id);
-  return refDoc.update([
-    score
-  ]);
+  return refDoc.update({
+    score: scores
+  }); 
 };
 
 export const getScore = (doc, score) => updateScore(doc.id, score);
