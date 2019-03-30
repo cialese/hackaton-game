@@ -6,7 +6,7 @@ let points = 0;
 const totQuestions = questions.length;
 const container = document.getElementById('quizContainer');
 const questionEl = document.getElementById('question');
-const imageContent=document.getElementById('img-content');
+const imgNav=document.getElementById('img-nav');
 const opt1 = document.getElementById('opt1');
 const opt2 = document.getElementById('opt2');
 const nextButton = document.getElementById('nextButton');
@@ -16,12 +16,12 @@ const loadQuestion = (questionIndex) => {
 
   const q = questions[questionIndex];
   questionEl.textContent = (questionIndex + 1) + '.' + q.question;
-
+  imgNav.src=q.gif;
   
-  const createImg=document.createElement('div')
-  const imgSrc = `<img src="${q.gif}">`
-  createImg.innerHTML=imgSrc;
-  imageContent.appendChild(createImg);
+  // const createImg=document.createElement('div')
+  // const imgSrc = `<img src="${q.gif}">`
+  // createImg.innerHTML=imgSrc;
+  // imageContent.appendChild(createImg);
 
   opt1.textContent = q.option1;
   opt2.textContent = q.option2;
