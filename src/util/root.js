@@ -36,7 +36,7 @@ const viewTmp = (routers) => {
   case 'home':
     contentQuestion.style.display='none';
     root.appendChild(homeTmp());
-    footerNav.appendChild(nav());
+    // footerNav.appendChild(nav());
 
     // navBar.appendChild(logOut());
     // main.appendChild(textarePublication());
