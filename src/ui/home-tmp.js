@@ -2,9 +2,9 @@ import { userState } from '../controller/login.js';
 
 
 export const homeTmp = () => {
-    const tmp = document.createElement('section');
-    tmp.setAttribute('id', 'home')
-    tmp.innerHTML = `
+  const tmp = document.createElement('section');
+  tmp.setAttribute('id', 'home');
+  tmp.innerHTML = `
     <div class="container-fluid padding">
         <div class="row padding">
            <div class="col-lg-6 center-photo">
@@ -12,18 +12,14 @@ export const homeTmp = () => {
             </div>
         </div>
     <div>
-        <h3>${userState().displayName}</h3>
+        <h4 class="text-center">${userState().displayName}</h4>
         <h4 class="text-center">Instrucciones</h4>
-        <p>hksajhdksajhdkjhsakjdhsakdjsjdasdsa
-        sadsadsadsadsadsadsadsadsadsadsad
-        sadsadsadsadkjadkjsahkdhsakdhjsad
-        hdgjasgdjsagjdgsajdgjsadgjsagdjsagd
-        fgfhgfhfhgfhfhfhgfhfhgfhgfhfhfhgfhgf
-        gdhfhgfhgfhgfhgfhgfvnffhgfhgfhgfhfhf
-        gjhgjhgjhgjhgjhgjhgjgjhgjgjhgjgjhgjhg</p>
+        <p>lorem ipsum</p>
+        <button id="btn-play"> </button>
     </div>
+
     
     `;
     
-    return tmp;
-} 
+  return tmp;
+}; 

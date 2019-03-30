@@ -1,6 +1,6 @@
 import { userState } from '../controller/login.js';
 
-export const createDoc = (uid, userName, userPhoto, points) => {
+export const createDoc = (uid, userName, userPhoto, score) => {
   return firebase
     .firestore()
     .collection('users')
@@ -8,11 +8,11 @@ export const createDoc = (uid, userName, userPhoto, points) => {
       uid,
       userName,
       userPhoto,
-      points 
+      score 
     }).catch((error) => {
-      console.log(error)
+      console.log(error);
     });
-}
+};
 
 export const addDoc = (callback) => {
   return firebase
@@ -22,23 +22,32 @@ export const addDoc = (callback) => {
       const data = [];
       querySnapshot.forEach(doc => {
         data.push({ 
-            id: doc.id,
-            ...doc.data(), 
-          });
+          id: doc.id,
+          ...doc.data(), 
         });
-        callback(data);
       });
+      callback(data);
+    });
 };
 
 export const getUserInfo = () => {
-  let countLike = 0;
+  let score = 0;
   const userUid = userState().uid;
   const image = userState().photoURL;
   const name = userState().displayName;
-    createDoc(userUid, name, image, countLike)
-      .then((response) => {
-        console.log(response);
-      }).catch(() => {
-        console.log('puntaje no agregada');
-      });
+  createDoc(userUid, name, image, score)
+    .then((response) => {
+      console.log(response);
+    }).catch(() => {
+      console.log('puntaje no agregada');
+    });
 };
+
+export const updateScore = (id, score) => {
+  let refDoc = firebase.firestore().collection('users').doc(id);
+  return refDoc.update([
+    score
+  ]);
+};
+
+export const getScore = (doc, score) => updateScore(doc.id, score);
